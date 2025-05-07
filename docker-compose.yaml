@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  api:
+    restart: unless-stopped
+    hostname: api
+    container_name: api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
